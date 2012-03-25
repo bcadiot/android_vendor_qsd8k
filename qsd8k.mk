@@ -117,13 +117,13 @@ PRODUCT_PACKAGES := \
 
 # Propriatary libs
 PRODUCT_COPY_FILES += \
-	lib/libcamera.so:system/lib/libcamera.so \
-	lib/liboemcamera.so:system/lib/liboemcamera.so \
-	lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
-	lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
-	lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
-	lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-	lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so
+	vendor/qsd8k/lib/libcamera.so:system/lib/libcamera.so \
+	vendor/qsd8k/lib/liboemcamera.so:system/lib/liboemcamera.so \
+	vendor/qsd8k/lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
+	vendor/qsd8k/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
+	vendor/qsd8k/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
+	vendor/qsd8k/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
+	vendor/qsd8k/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so
 
 # Permissions
 PRODUCT_COPY_FILES += \
