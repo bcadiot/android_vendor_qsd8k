@@ -63,7 +63,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Ril workaround
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.telephony.ril.v3=signalstrength 
+	ro.telephony.ril.v3=signalstrength,singlepdp 
 
 # HardwareRenderer properties
 # dirty_regions: "false" to disable partial invalidates, override if enabletr=true
