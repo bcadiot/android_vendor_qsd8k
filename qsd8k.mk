@@ -1,4 +1,4 @@
-DEVICE_PACKAGE_OVERLAYS := vendor/qsd8k/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/qsd8k/overlay
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	media.a1026.nsForVoiceRec=0 \
