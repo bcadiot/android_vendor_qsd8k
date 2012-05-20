@@ -3,7 +3,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/qsd8k/overlay
 # QSD8K uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
-PRODUCT_LOCALES += hdpi
+PRODUCT_LOCALES := en hdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	media.a1026.nsForVoiceRec=0 \
