@@ -1,5 +1,10 @@
 DEVICE_PACKAGE_OVERLAYS += vendor/qsd8k/overlay
 
+# QSD8K uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_LOCALES += hdpi
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	media.a1026.nsForVoiceRec=0 \
 	media.a1026.enableA1026=1 \
@@ -79,18 +84,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.service.adb.enable=1
 
 # Sensors
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	camera.qsd8k 
 
+# Sensors
+PRODUCT_PACKAGES += \
+	com.android.future.usb.accessory \
+	camera.qsd8k \
+	btconfig
+
 # Audio
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.primary.qsd8k \
 	audio_policy.qsd8k \
 	libaudioutils 
 
 # GPU
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	copybit.qsd8k \
 	gralloc.qsd8k \
 	hwcomposer.default \
@@ -101,19 +112,24 @@ PRODUCT_PACKAGES := \
 	libQcomUI 
 
 # Omx
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	libOmxCore \
 	libOmxVidEnc \
 	libOmxVdec \
 	libstagefrighthw 
 
 # Omx cli test apps
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	libmm-omxcore \
 	mm-vdec-omx-test \
 	liblasic \
 	ast-mm-vdec-omx-test \
 	mm-venc-omx-test
+
+# Needed for when building camera.qsd8k
+PRODUCT_COPY_FILES += \
+	vendor/qsd8k/lib/libcamera.so:$(PRODUCT_OUT)/obj/lib/libcamera.so \
+	vendor/qsd8k/lib/liboemcamera.so:$(PRODUCT_OUT)/obj/lib/liboemcamera.so
 
 # Propriatary libs
 PRODUCT_COPY_FILES += \
