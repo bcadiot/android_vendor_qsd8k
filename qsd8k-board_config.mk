@@ -55,7 +55,7 @@ BOARD_KERNEL_CMDLINE := no_console_suspend=1 msmsdcc_sdioirq=1 wire.search_count
 BOARD_KERNEL_BASE := 0x20000000
 BOARD_KERNEL_NEW_PPPOX := true
 # TARGET_PREBUILT_KERNEL := $(CONFIG_BOARD_FILES)/prebuilt/kernel
-TARGET_KERNEL_CONFIG    := evervolv_$(CONFIG_BOARD_NAME)_defconfig
+TARGET_KERNEL_CONFIG    := bcm_$(CONFIG_BOARD_NAME)_defconfig
 TARGET_KERNEL_SOURCE    := kernel/htc/qsd8k
 
 BOARD_HAVE_BLUETOOTH := true
